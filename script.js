@@ -4,7 +4,7 @@ let buttons = document.querySelectorAll('button');
 let string = "";
 let first = 0;
 let result = 0;
-let opeatorChoose = "";
+let opeatorChooses = "";
 let arr = Array.from(buttons);
 arr.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -28,25 +28,25 @@ function calculatingByMouse(e)
     console.log(input.value);
     if(e.target.innerHTML == "=")
     {
-        if(opeatorChoose == "+")
+        if(opeatorChooses == "+")
         {
             result = first + parseFloat(string);
             input.value = result.toFixed(2);
             string = result.toString();
         }
-        else if(opeatorChoose == "-")
+        else if(opeatorChooses == "-")
         {
             result = first - parseFloat(string);
             input.value = result.toFixed(2);
             string = result.toString();
         }
-        else if(opeatorChoose == "*")
+        else if(opeatorChooses == "*")
         {
             result = first * parseFloat(string);
             input.value = result.toFixed(2);
             string = result.toString();
         }
-        else if(opeatorChoose == "/")
+        else if(opeatorChooses == "/")
         {
             result = first / parseFloat(string);
            
@@ -54,33 +54,49 @@ function calculatingByMouse(e)
             input.value = result.toFixed(2);
             string = result.toString();
         }
+        else if(opeatorChooses == "%")
+        {
+            result = first % parseFloat(string);
+           
+            // input.value = parseFloat(testing);
+            input.value = result.toFixed(2);
+            string = result.toString();
+        }
     }
+    
     else if(e.target.innerHTML == "+")
     {
         first = parseFloat(string);
         input.value = e.target.innerHTML;
-        opeatorChoose = "+";
+        opeatorChooses = "+";
         string = "";
     }
     else if(e.target.innerHTML == "-")
     {
         first = parseFloat(string);
         input.value = e.target.innerHTML;
-        opeatorChoose = "-";
+        opeatorChooses = "-";
         string = "";
     }
     else if(e.target.innerHTML == "/")
     {
         first = parseFloat(string);
         input.value = e.target.innerHTML;
-        opeatorChoose = "/";
+        opeatorChooses = "/";
         string = "";
     }
     else if(e.target.innerHTML == "*")
     {
         first = parseFloat(string);
         input.value = e.target.innerHTML;
-        opeatorChoose = "*";
+        opeatorChooses = "*";
+        string = "";
+    }
+    else if(e.target.innerHTML == "%")
+    {
+        first = parseFloat(string);
+        input.value = e.target.innerHTML;
+        opeatorChooses = "%";
         string = "";
     }
 
@@ -102,32 +118,6 @@ function calculatingByMouse(e)
         string += e.target.innerHTML;
         input.value = string;
     }
-
-    // if(e.target.innerHTML == '=')
-    // {
-    //     string = eval(string);
-    //     input.value = string;
-    //     string = "";
-    // }
-
-    // else if (e.target.innerHTML == 'AC')
-    // {
-    //     string = "";
-    //     input.value = string;
-    // }
-
-    // else if(e.target.innerHTML == 'DEL')
-    // {
-    //     string = string.substring(0, string.length-1);
-    //     input.value = string;
-    // }
-
-    // else
-    // {
-    //     string += e.target.innerHTML;
-    //     input.value =string;
-   
-    // }
 
 }
 
