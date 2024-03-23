@@ -24,7 +24,6 @@ arr.forEach(button => {
 
 function calculatingByMouse(e)
 {
-    // console.log(e);
     console.log(input.value);
     if(e.target.innerHTML == "=")
     {
@@ -63,7 +62,7 @@ function calculatingByMouse(e)
             string = result.toString();
         }
     }
-    
+
     else if(e.target.innerHTML == "+")
     {
         first = parseFloat(string);
@@ -121,52 +120,130 @@ function calculatingByMouse(e)
 
 }
 
-window.addEventListener('keyup', (e) => {
 
-    // if((e.keyCode>=48 && e.keyCode<=57) || (e.keyCode == 46) || (e.keyCode == 8) || (e.keyCode == 13)) 
-    // {
-    //     calculatingByKeyboard(e.key);
-    // }
-    
-    // if((e.key>=0 && e.key<=9))
-    // {
-    //         calculatingByKeyboard(e.key);
-    // }
-    
 
-    // console.log(e.key);
-});
 
-function calculatingByKeyboard(e)
-{
-    console.log(e);
-    if((e == 'enter'))
-    {
-        string = eval(string);
-        input.value = string;
-        string = "";
-    }
 
-    else if ((e == 'delete'))
-    {
-        string = "";
-        input.value = string;
-    }
 
-    // else if(e.target.innerHTML == 'DEL')
-    // {
-    //     string = string.substring(0, string.length-1);
-    //     input.value = string;
-    // }
 
-    else
-    {
-        string += e;
-        input.value =string;
-   
-    }
 
-}
+
+
+
+
+
+
+
+// window.addEventListener('keyup', (e) => {
+
+//     console.log(e.key);
+
+//     if((e.key>=0 && e.key<=9) || (e.key == "Enter") || (e.key == "Backspace") || (e.key == "Delete") || (e.key == "Shift") || (e.key == "+") || (e.key == "-") || (e.key == "*") || (e.key == "/") || (e.key == "%"))
+//     {
+//             calculatingByKeyboard(e.key);
+
+//     }    
+
+// });
+
+// function calculatingByKeyboard(e)
+// {
+//     // console.log(e);
+//     console.log(input.value);
+//     if(e == 'Enter')
+//     {
+//         if(opeatorChooses == "+")
+//         {
+//             result = first + parseFloat(string);
+//             input.value = result.toFixed(2);
+//             string = result.toString();
+//         }
+//         else if(opeatorChooses == "-")
+//         {
+//             result = first - parseFloat(string);
+//             input.value = result.toFixed(2);
+//             string = result.toString();
+//         }
+//         else if(opeatorChooses == "*")
+//         {
+//             result = first * parseFloat(string);
+//             input.value = result.toFixed(2);
+//             string = result.toString();
+//         }
+//         else if(opeatorChooses == "/")
+//         {
+//             result = first / parseFloat(string);
+           
+//             // input.value = parseFloat(testing);
+//             input.value = result.toFixed(2);
+//             string = result.toString();
+//         }
+//         else if(opeatorChooses == "%")
+//         {
+//             result = first % parseFloat(string);
+           
+//             // input.value = parseFloat(testing);
+//             input.value = result.toFixed(2);
+//             string = result.toString();
+//         }
+//     }
+
+//     else if(e == "+")
+//     {
+//         first = parseFloat(string);
+//         input.value = e;
+//         opeatorChooses = "+";
+//         string = "";
+//     }
+//     else if(e == "-")
+//     {
+//         first = parseFloat(string);
+//         input.value = e;
+//         opeatorChooses = "-";
+//         string = "";
+//     }
+//     else if(e == "/")
+//     {
+//         first = parseFloat(string);
+//         input.value = e;
+//         opeatorChooses = "/";
+//         string = "";
+//     }
+//     else if(e == "*")
+//     {
+//         first = parseFloat(string);
+//         input.value = e;
+//         opeatorChooses = "*";
+//         string = "";
+//     }
+//     else if(e == "%")
+//     {
+//         first = parseFloat(string);
+//         input.value = e;
+//         opeatorChooses = "%";
+//         string = "";
+//     }
+
+//    else if (e == 'Delete')
+//     {
+//         string = "";
+//         input.value = string;
+//     }
+
+//     else if(e == 'Backspace')
+//     {
+//         string = string.substring(0, string.length-1);
+//         input.value = string;
+//     }
+
+//     else
+//     {
+//         input.value = "";   
+//         string += e;
+//         input.value =string;
+//     }
+
+// }
 
 // let colorChangingIcon = document.querySelector('#colorChanging-icon');
 
