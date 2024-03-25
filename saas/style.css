@@ -15,6 +15,33 @@ body {
   background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 
+.allContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 90vw;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btns .btn {
+  background: transparent;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0.5rem 0rem 1rem black;
+  font-size: 1rem;
+}
+
 .calculator {
   border: 1px solid #717377;
   padding: 20px;
@@ -44,7 +71,7 @@ input::placeholder {
   color: #fff;
 }
 
-button {
+.calBtn {
   border: none;
   width: 4rem;
   height: 4rem;
