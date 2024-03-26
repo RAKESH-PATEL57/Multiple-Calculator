@@ -57,6 +57,23 @@ body
 }
 
 //**************[[[[[[[[[[[[[[[[[[[[[ Normal Calculator section start ]]]]]]]]]]]]]]]]]]]]]]]*************************
+.normalCalculator
+{
+    // display: block;
+    opacity: 1;
+    scale: 1;
+    transition: .5s linear;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+
+}
+.normalCalculator.hide-show-nc
+{
+    opacity: 0;
+    scale: 0;
+    // display: none; 
+}
 
 input
 {
@@ -127,14 +144,27 @@ button:hover
 
 //**************[[[[[[[[[[[[[[[[[[[[[ BMI Calculator section start ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
-#BMI-calulator
+.bmiCalculator
+{
+    // display: none;
+    opacity: 0;
+    scale: 0;
+}
+
+.bmiCalculator.show-hide-bmic
 {
     @include flex-box(flex,center,center);
     gap: 3rem;
     flex-direction: column;
+    opacity: 1;
+    scale: 1;
+    transition: .5s linear;
+    position: absolute;
+    right: 5%;
+    top: 10%;
 }
 
-#BMI-calulator .content
+#bmiCalculator .content
 {
     @include flex-box(flex,center,center);
     gap: 2.5rem;
@@ -176,14 +206,14 @@ input[type="number"]::-webkit-inner-spin-button
   font-size: 1rem;
 }
 
-#BMI-calulator .result
+#bmiCalculator .result
 {
     width: 100%;
     color: $font-color;
     font-weight: bold;
 }
 
-#BMI-calulator .bmiComment
+#bmiCalculator .bmiComment
 {
     height: 2rem;
     @include flex-box(flex,center,center);
