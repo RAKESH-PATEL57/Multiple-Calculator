@@ -99,14 +99,8 @@ input:hover {
 
 button:hover {
   box-shadow: 0px 0px 20px #00d9ff;
-  animation: animateBg 5s linear infinite;
 }
 
-@keyframes animateBg {
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
 .equalBtn {
   background: #fb7c14;
 }
