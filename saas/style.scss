@@ -127,6 +127,48 @@ button:hover
 
 //**************[[[[[[[[[[[[[[[[[[[[[ BMI Calculator section start ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
+#BMI-calulator
+{
+    @include flex-box(flex,center,center);
+    gap: 3rem;
+    flex-direction: column;
+}
+
+#BMI-calulator .content
+{
+    @include flex-box(flex,center,center);
+    gap: 2.5rem;
+    flex-direction: column;
+}
+
+.content .inputsBMI
+{
+    height: 3rem;
+    color: $font-color;
+    @include flex-box(flex,space-between,center);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.content input
+{
+   height: 100%;
+   cursor: auto;
+   border: 1px solid $font-color;
+   outline: none;
+}
+
+.content .BMIcalculateBtn
+{
+  padding: .3rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fafafa;
+  border: 2px solid aqua;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
 //**************[[[[[[[[[[[[[[[[[[[[[ BMI Calculator section end ]]]]]]]]]]]]]]]]]]]]]]]*************************
 

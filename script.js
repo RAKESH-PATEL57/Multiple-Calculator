@@ -1,5 +1,5 @@
 let input = document.getElementById('inputBox');
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('.calBtn');
 
 let string = "";
 let first = 0;
