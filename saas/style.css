@@ -109,6 +109,50 @@ button:hover {
   color: #ffdd00;
 }
 
+#BMI-calulator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+#BMI-calulator .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+.content .inputsBMI {
+  height: 3rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.content input {
+  height: 100%;
+  cursor: auto;
+  border: 1px solid white;
+  outline: none;
+}
+
+.content .BMIcalculateBtn {
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fafafa;
+  border: 2px solid aqua;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 @media (max-width: 1080px) {
   .calculator {
     padding: 10px;
