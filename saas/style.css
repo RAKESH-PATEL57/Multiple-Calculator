@@ -140,6 +140,11 @@ button:hover {
   cursor: auto;
   border: 1px solid white;
   outline: none;
+  font-size: 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  display: none;
 }
 
 .content .BMIcalculateBtn {
@@ -151,6 +156,19 @@ button:hover {
   color: black;
   font-weight: bold;
   font-size: 1rem;
+}
+
+#BMI-calulator .result {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+}
+
+#BMI-calulator .bmiComment {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1080px) {

@@ -156,6 +156,12 @@ button:hover
    cursor: auto;
    border: 1px solid $font-color;
    outline: none;
+   font-size: 1rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button 
+{
+    display: none;
 }
 
 .content .BMIcalculateBtn
@@ -169,6 +175,20 @@ button:hover
   font-weight: bold;
   font-size: 1rem;
 }
+
+#BMI-calulator .result
+{
+    width: 100%;
+    color: $font-color;
+    font-weight: bold;
+}
+
+#BMI-calulator .bmiComment
+{
+    height: 2rem;
+    @include flex-box(flex,center,center);
+}
+
 
 //**************[[[[[[[[[[[[[[[[[[[[[ BMI Calculator section end ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
