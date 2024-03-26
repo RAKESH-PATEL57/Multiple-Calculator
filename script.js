@@ -1,3 +1,29 @@
+//***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+let normalCalBtn = document.getElementById('normalCBtn');
+let bmiCalBtn = document.getElementById('bmiCBtn');
+let interestCalBtn = document.getElementById('interestCBtn');
+
+let normalCalculator = document.querySelector('.normalCalculator');
+let bmiCalculator = document.querySelector('.bmiCalculator');
+console.log(bmiCalculator);
+
+bmiCalBtn.addEventListener('click', () => {
+    normalCalculator.classList.add('hide-show-nc');
+    bmiCalculator.classList.add('show-hide-bmic');
+});
+
+normalCalBtn.addEventListener('click', () => {
+    normalCalculator.classList.remove('hide-show-nc');
+    bmiCalculator.classList.remove('show-hide-bmic');
+    
+});
+
+//***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section stop ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+
+//***********************[[[[[[[[[[[[[[[[[[[[ Normal Calculator Section start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
 let input = document.getElementById('inputBox');
 let buttons = document.querySelectorAll('.calBtn');
 
@@ -11,10 +37,6 @@ arr.forEach(button => {
         calculatingByMouse(e);
     })
 });
-
-
-//***************[[[[[[  Calculating ]]]]******************************]]]]]]]]]]]]]]
-
 
 // function ParseFloat(str) {
 //     str = str.toString();
@@ -120,18 +142,7 @@ function calculatingByMouse(e)
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+//***********************[[[[[[[[[[[[[[[[[[[[ Normal Calculator Section End ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
 
 // window.addEventListener('keyup', (e) => {
@@ -245,9 +256,8 @@ function calculatingByMouse(e)
 
 // }
 
-// let colorChangingIcon = document.querySelector('#colorChanging-icon');
+//***********************[[[[[[[[[[[[[[[[[[[[ BMI calculator Section start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
-// colorChangingIcon.onclick = () => {
-//    colorChangingIcon.classList.toggle('bxs-shower');    
-//    document.body.classList.toggle('bxs-color');
-// }
+// let bmiCalulator = document.getElementById('BMI-calulator');
+
+//***********************[[[[[[[[[[[[[[[[[[[[ BMI calculator Section end   ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
