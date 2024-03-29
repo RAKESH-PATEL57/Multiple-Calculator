@@ -19,7 +19,7 @@ normalCalBtn.addEventListener('click', () => {
     
 });
 
-//***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section stop ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+//***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section end ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
 
 //***********************[[[[[[[[[[[[[[[[[[[[ Normal Calculator Section start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
@@ -143,6 +143,14 @@ function calculatingByMouse(e)
 }
 
 //***********************[[[[[[[[[[[[[[[[[[[[ Normal Calculator Section End ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+//***********************[[[[[[[[[[[[[[[[[[[[ BMI Calculator Section Start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+let ageValue = document.querySelector("#age");
+let heightValue = document.querySelector("#height");
+let weightValue = document.querySelector("#weight");
+let bmiComment = document.querySelector(".");
+
+//***********************[[[[[[[[[[[[[[[[[[[[ BMI Calculator Section End ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
 
 // window.addEventListener('keyup', (e) => {
