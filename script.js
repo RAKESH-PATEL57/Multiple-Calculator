@@ -165,26 +165,45 @@ function calculate(){
 function countBmi(){
     var p = [age.value, height.value, weight.value];
   
-    var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
-        
+    // var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+    var bmif = (Number(p[2])/Number(p[1])/Number(p[1])) * 10000;
+    // console.log(bmi);
+    // console.log(bmif);
+
+    var commentColor = "#00ff3c";    
     var result = '';
-    if(bmi<18.5){
+    if(bmi<18.5)
+    {
       result = ' Underweight';
-       }else if(18.5<=bmi&&bmi<=24.9){
+      commentColor = "#ff0000";    
+    }
+    else if(18.5<=bmi&&bmi<=24.9)
+    {
       result = ' Healthy';
-       }else if(25<=bmi&&bmi<=29.9){
+      commentColor = "#00ff3c";
+    }
+    else if(25<=bmi&&bmi<=29.9)
+    {
       result = ' Overweight';
-       }else if(30<=bmi&&bmi<=34.9){
+      commentColor = "#ff0000";  
+    }
+    else if(30<=bmi&&bmi<=34.9)
+    {
       result = ' Obese';
-       }else if(35<=bmi){
+      commentColor = "#ff0000";  
+    }else if(35<=bmi)
+    {
       result = ' Extremely obese';
-       }
+      commentColor = "#ff0000";  
+    }
   
   
   
 //   resultArea.style.display = "block";
   document.querySelector(".bmiComment").innerHTML = `You are ${result}`;
+  document.querySelector(".bmiComment").style.color = commentColor;
   document.querySelector("#bmiResult").innerHTML = bmi.toFixed(2);
+  document.querySelector("#bmiResult").style.color = commentColor;
   
   }
   
