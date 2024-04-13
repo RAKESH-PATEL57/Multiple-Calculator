@@ -44,6 +44,13 @@ body
     cursor: pointer;
     box-shadow: .5rem 0rem 1rem black;
     font-size: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.btns .btn:hover
+{
+    color: $btn-hover-color;
+    box-shadow: 0rem 0rem .5rem $btn-hover-color;
 }
 //*********************[[[[[[[[[[[[[[[[[[ all type of calculators section end   ]]]]]]]]]]]]]]]]]]]]**************************
 
@@ -211,6 +218,12 @@ input[type="number"]::-webkit-inner-spin-button
     width: 100%;
     color: $font-color;
     font-weight: bold;
+}
+
+.result #bmiResult
+{
+    color: aqua;
+    font-size: 1.2rem;
 }
 
 #bmiCalculator .bmiComment
