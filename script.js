@@ -1,4 +1,21 @@
-//***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+//***********************[[[[[[[[[[[[[[[[[[[[ Activate current btn [start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+let btns = document.querySelectorAll('.btn');
+
+let previousData = 0;
+btns.forEach((elem, index) => {
+    btns[index].addEventListener('click', (e) => {
+        btns[previousData].classList.remove('active');
+
+        e.target.classList.add('active');
+
+        previousData = index;
+    });
+});
+//***********************[[[[[[[[[[[[[[[[[[[[ Activate current btn [ end ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+
+//***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section [ start ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
 let normalCalBtn = document.getElementById('normalCBtn');
 let bmiCalBtn = document.getElementById('bmiCBtn');
