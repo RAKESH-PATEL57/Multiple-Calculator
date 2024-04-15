@@ -26,7 +26,6 @@ body
     width: 90vw;
     // border: 2px solid red;
     position: relative;
-
 }
 
 //*********************[[[[[[[[[[[[[[[[[[ all type of calculators section start ]]]]]]]]]]]]]]]]]]]]**************************
@@ -198,13 +197,14 @@ button:hover
     width: 100%;
 }
 
-.content input
+input
 {
    height: 100%;
    cursor: auto;
    border: 1px solid $font-color;
    outline: none;
    font-size: 1rem;
+//    width: 50%;
 }
 
 input[type="number"]::-webkit-inner-spin-button 
@@ -246,6 +246,47 @@ input[type="number"]::-webkit-inner-spin-button
 
 //**************[[[[[[[[[[[[[[[[[[[[[ BMI Calculator section end ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
+//**************[[[[[[[[[[[[[[[[[[[[[ Sample Interest Calculator section [* start *]]] ]]]]]]]]]]]]]]]]]]]]]]]*************************
+.sampleInterest
+{
+    scale: 0;
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.sampleInterest.show-hide-sic
+{
+    @include flex-box(flex,center,center);
+    gap: 3rem;
+    flex-direction: column;
+    opacity: 1;
+    scale: 1;
+    transition: .5s linear;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    height: 35rem;
+    z-index: 1000;
+    // width: 35rem;
+}
+
+.sInterest
+{
+    height: 2rem;
+    color: $font-color;
+    @include flex-box(flex,space-between,center);
+    font-size: 1rem;
+    width: 80%;
+}
+
+.sInterest input
+{
+   width: 50%;
+
+}
+
+
+//**************[[[[[[[[[[[[[[[[[[[[[ Sample Interest Calculator section [*  end *]]] ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
 //**************[[[[[[[[[[[[[[[[[[[[[ Making responssive ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
