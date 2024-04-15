@@ -19,20 +19,27 @@ btns.forEach((elem, index) => {
 
 let normalCalBtn = document.getElementById('normalCBtn');
 let bmiCalBtn = document.getElementById('bmiCBtn');
-let interestCalBtn = document.getElementById('interestCBtn');
+let sampleInterestCalBtn = document.getElementById('interestCBtn');
 
 let normalCalculator = document.querySelector('.normalCalculator');
 let bmiCalculator = document.querySelector('.bmiCalculator');
+let sampleInterestCalculator = document.querySelector('.sampleInterest');
 
+sampleInterestCalBtn.addEventListener('click', () => {
+    sampleInterestCalculator.classList.add('show-hide-sic');
+    normalCalculator.classList.add('hide-show-nc');
+    bmiCalculator.classList.remove('show-hide-bmic');
+});
 bmiCalBtn.addEventListener('click', () => {
     normalCalculator.classList.add('hide-show-nc');
     bmiCalculator.classList.add('show-hide-bmic');
+    sampleInterestCalculator.classList.remove('show-hide-sic');
 });
 
 normalCalBtn.addEventListener('click', () => {
     normalCalculator.classList.remove('hide-show-nc');
     bmiCalculator.classList.remove('show-hide-bmic');
-    
+    sampleInterestCalculator.classList.remove('show-hide-sic');
 });
 
 //***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section end ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
@@ -183,7 +190,7 @@ function countBmi(){
     var p = [age.value, height.value, weight.value];
   
     // var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
-    var bmif = (Number(p[2])/Number(p[1])/Number(p[1])) * 10000;
+    var bmi = (Number(p[2])/Number(p[1])/Number(p[1])) * 10000;
     // console.log(bmi);
     // console.log(bmif);
 
