@@ -235,6 +235,43 @@ function countBmi(){
 //***********************[[[[[[[[[[[[[[[[[[[[ BMI Calculator Section End ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
 
+//***********************[[[[[[[[[[[[[[[[[[[[ Sample Interest Calculator Section [ Start ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+let principleAmountP = document.querySelector('#pAmount');
+let interestR = document.querySelector('#aInterest');
+let timePeriodT = document.querySelector('#tPeriod');
+
+let sInterestBtn = document.querySelector('#sInterestBtn');
+
+let resultInterestContainer = document.querySelector('.resultInterestContainer');
+
+let smIResult = document.querySelector('#smIResult');
+let totalAmountResult = document.querySelector('#totalAmountResult');
+
+sInterestBtn.addEventListener('click', () => {
+    var P = principleAmountP.value;
+    var R = interestR.value;
+    var T = timePeriodT.value;
+    
+    if((P === '') && (R === '') && (T === ''))
+    {
+        alert("Please enter the details first");
+    } 
+    else
+    {    
+        resultInterestContainer.style.display = "block";
+        var SI = (P * R * T) / 100;
+        
+        var TA = Number(P) + Number(SI);
+        
+        smIResult.innerText = SI + "₹";
+        totalAmountResult.innerText = TA + "₹";
+    }
+});
+
+
+//***********************[[[[[[[[[[[[[[[[[[[[ Sample Interest Calculator Section [  End ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+
 // window.addEventListener('keyup', (e) => {
 
 //     console.log(e.key);
