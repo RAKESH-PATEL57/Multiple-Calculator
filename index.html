@@ -22,7 +22,7 @@
 
       <main>
         <section class="calculator normalCalculator" id="normalCalculator">
-          <h1>Normal Calculator</h1>
+          <h1 class="calculatorName">Normal Calculator</h1>
 
           <input type="text" placeholder="0" id="inputBox" />
           <div>
@@ -57,7 +57,7 @@
         </section>
 
         <section class="calculator bmiCalculator" id="bmiCalculator">
-            <h1>BMI Calculator</h1>
+            <h1 class="calculatorName">BMI Calculator</h1>
             <div class="content">
   
   
@@ -84,7 +84,7 @@
             </div>
         </section>
         <section class="calculator sampleInterest">
-          <h1>Sample Interest Calculator</h1>
+          <h1 class="calculatorName">Sample Interest Calculator</h1>
           <div class="prAmount sInterest">
             <label for="principleAmount">Principle Amount</label>
             <input type="number" id="pAmount" required>
@@ -98,7 +98,11 @@
             <input type="number" id="tPeriod" required>
           </div>
         
-          <button>Calculate</button>
+          <button id="sInterestBtn">Calculate</button>
+          <div class="resultInterestContainer">
+            <p>Sample Intereset = <span  id="smIResult"></span></p>
+            <p>Final Amount = <span id="totalAmountResult"></span></p>
+          </div>
         </section>
       </main>
     </div>
