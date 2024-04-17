@@ -64,6 +64,15 @@ body {
   box-shadow: 0px 3px 15px rgba(0, 85, 255, 0.5);
 }
 
+.calculatorName {
+  text-align: center;
+  text-shadow: 0rem 0rem 0.5rem aqua;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
 .normalCalculator {
   opacity: 1;
   scale: 1;
@@ -249,6 +258,24 @@ input[type=number]::-webkit-inner-spin-button {
 
 .sInterest input {
   width: 50%;
+}
+
+#sInterestBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+.resultInterestContainer {
+  font-size: 1.5rem;
+  color: white;
+  display: none;
+}
+
+.resultInterestContainer p span {
+  color: aqua;
 }
 
 @media (max-width: 1080px) {
