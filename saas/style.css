@@ -260,7 +260,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 50%;
 }
 
-#sInterestBtn {
+.allCalBtn {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -276,6 +276,52 @@ input[type=number]::-webkit-inner-spin-button {
 
 .resultInterestContainer p span {
   color: aqua;
+}
+
+.cgpaCalculator .cgpaFirstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cgpaFirstContainer input {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.cgpaCalculator .cgpaSecondContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cgpaSecondContainer .cgpaSecondContainerOdderList {
+  height: 25rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-left: 2rem;
+  display: none;
+}
+
+.cgpaSecondContainerOdderList li input {
+  text-align: left;
+}
+
+.cgpaCalculator p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.cgpaCalculator #cgparesult {
+  color: aqua;
+}
+
+.cgpaSecondContainer .resultsgpa-container {
+  display: none;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 @media (max-width: 1080px) {
