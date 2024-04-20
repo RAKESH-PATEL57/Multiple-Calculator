@@ -272,6 +272,11 @@ sInterestBtn.addEventListener('click', () => {
 //***********************[[[[[[[[[[[[[[[[[[[[ Sample Interest Calculator Section [  End ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
 
+//***********************[[[[[[[[[[[[[[[[[[[[ CGPA Calculator Section [ Start ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+//***********************[[[[[[[[[[[[[[[[[[[[ CGPA Calculator Section [  End ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+
+
 // window.addEventListener('keyup', (e) => {
 
 //     console.log(e.key);
