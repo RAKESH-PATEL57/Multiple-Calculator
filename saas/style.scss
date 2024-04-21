@@ -349,6 +349,11 @@ input[type="number"]::-webkit-inner-spin-button
     display: none;
 }
 
+.cgpaSecondContainerOdderList li
+{
+    color: $font-color;
+}
+
 .cgpaSecondContainerOdderList li input
 {
     text-align: left;

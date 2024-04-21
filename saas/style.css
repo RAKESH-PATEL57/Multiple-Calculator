@@ -305,6 +305,10 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+.cgpaSecondContainerOdderList li {
+  color: white;
+}
+
 .cgpaSecondContainerOdderList li input {
   text-align: left;
 }
