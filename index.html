@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Multi Calculator</title>
     <link rel="stylesheet" href="./saas/style.css" />
 
     <link
@@ -18,10 +18,12 @@
         <button class="btn active" id="normalCBtn">Normal Calculator</button>
         <button class="btn" id="bmiCBtn">BMI Calculator</button>
         <button class="btn" id="interestCBtn">Interest Calculator</button>
+        <button class="btn" id="cgpaCBtn">CGPA Calculator</button>
+        <button class="btn" id="sgpaCBtn">SGPA Calculator</button>
       </div>
 
       <main>
-        <!-- <section class="calculator normalCalculator" id="normalCalculator">
+        <section class="calculator normalCalculator" id="normalCalculator">
           <h1 class="calculatorName">Normal Calculator</h1>
 
           <input type="text" placeholder="0" id="inputBox" />
@@ -100,8 +102,8 @@
             <p>Sample Intereset = <span  id="smIResult"></span></p>
             <p>Final Amount = <span id="totalAmountResult"></span></p>
           </div>
-        </section> -->
-        <section class="calculator cgpaCalculator">
+        </section>
+        <!-- <section class="calculator cgpaCalculator">
           <h1 class="calculatorName">CGPA Calculator</h1>
           <div class="cgpaFirstContainer">
             <input type="number" placeholder="Enter number of Subject" id="numberOfSubject" required>
@@ -111,32 +113,18 @@
           <div class="cgpaSecondContainer">
 
             <ol class="cgpaSecondContainerOdderList">
-              <!-- <li>
-              <input type="number" placeholder="Total Credit">
-              <input type="number" placeholder="SGPA">
-            </li>
-            <li>
-              <input type="number" placeholder="Total Credit">
-              <input type="number" placeholder="SGPA">
-            </li>
-            <li>
-              <input type="number" placeholder="Total Credit">
-              <input type="number" placeholder="SGPA">
-            </li>
-            <li>
-              <input type="number" placeholder="Total Credit">
-              <input type="number" placeholder="SGPA">
-            </li> -->
-          </ol>
-          <button id="cgpaCalculateBtn" class="allCalBtn">Calculate</button>
-          <div class="cgparesult">
-            <p> Your CGPA is <span id="cgparesult"> 8.5</span></p>
+          </ol>  
+          <div class="resultsgpa-container">
+            <button id="cgpaCalculateBtn" class="allCalBtn">Calculate</button>
+            <div class="cgparesult">
+              <p> Your CGPA is <span id="cgparesult"> 8.5</span></p>
+            </div>
           </div>
         </div>
-        </section>
+        </section> -->
       </main>
     </div>
-    <!-- <script src="script.js"></script> -->
-    <script src="./cgpa.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="./cgpa.js"></script> -->
   </body>
   </html>
