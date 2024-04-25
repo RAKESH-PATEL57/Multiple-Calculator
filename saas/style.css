@@ -13,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(45deg, #0a0a0a, #3a4452);
+  overflow: hidden;
 }
 
 .allContent {
@@ -278,11 +279,29 @@ input[type=number]::-webkit-inner-spin-button {
   color: aqua;
 }
 
+.cgpaCalculator {
+  opacity: 0;
+  pointer-events: none;
+  scale: 0;
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translate(0%, -50%);
+}
+
+.cgpaCalculator.show-hide-cgpamic {
+  opacity: 1;
+  pointer-events: auto;
+  scale: 1;
+}
+
 .cgpaCalculator .cgpaFirstContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30rem;
 }
 
 .cgpaFirstContainer input {
@@ -295,6 +314,7 @@ input[type=number]::-webkit-inner-spin-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30rem;
 }
 
 .cgpaSecondContainer .cgpaSecondContainerOdderList {
@@ -303,6 +323,10 @@ input[type=number]::-webkit-inner-spin-button {
   overflow-x: hidden;
   padding-left: 2rem;
   display: none;
+}
+
+.cgpaSecondContainer .cgpaSecondContainerOdderList::-webkit-scrollbar {
+  opacity: 0;
 }
 
 .cgpaSecondContainerOdderList li {
@@ -318,7 +342,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 1.3rem;
 }
 
-.cgpaCalculator #cgparesult {
+.cgpaCalculator #cgpa {
   color: aqua;
 }
 

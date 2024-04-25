@@ -17,6 +17,7 @@ body
     height: 100vh;
     @include flex-box(flex,center,center);
     background: $bg-color;
+    overflow: hidden;
 }
 
 .allContent
@@ -317,12 +318,32 @@ input[type="number"]::-webkit-inner-spin-button
 //**************[[[[[[[[[[[[[[[[[[[[[ Sample Interest Calculator section [*  end *]]] ]]]]]]]]]]]]]]]]]]]]]]]*************************
 
 //**************[[[[[[[[[[[[[[[[[[[[[ CGPA Calculator section [*  Start  *]]]]]]]]]]]]]]]]]]]]]]]]]]]]*************************
+.cgpaCalculator
+{
+    opacity: 0;
+    pointer-events: none;
+    scale: 0;
+    transition: .5s;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translate(0%,-50%);
+}
+
+.cgpaCalculator.show-hide-cgpamic
+{
+    opacity: 1;
+    pointer-events: auto;
+    scale: 1;
+}
+
 .cgpaCalculator .cgpaFirstContainer
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 30rem;
 }
 
 .cgpaFirstContainer input
@@ -337,6 +358,7 @@ input[type="number"]::-webkit-inner-spin-button
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 30rem;
 }
 
 .cgpaSecondContainer .cgpaSecondContainerOdderList
@@ -347,6 +369,11 @@ input[type="number"]::-webkit-inner-spin-button
     overflow-x: hidden;
     padding-left: 2rem;
     display: none;
+}
+
+.cgpaSecondContainer .cgpaSecondContainerOdderList::-webkit-scrollbar
+{
+    opacity: 0;
 }
 
 .cgpaSecondContainerOdderList li
@@ -365,7 +392,7 @@ input[type="number"]::-webkit-inner-spin-button
     font-size: 1.3rem;
 }
 
-.cgpaCalculator #cgparesult
+.cgpaCalculator #cgpa
 {
     color: $main-color;
 }
