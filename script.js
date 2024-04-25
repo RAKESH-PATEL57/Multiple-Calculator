@@ -20,27 +20,40 @@ btns.forEach((elem, index) => {
 let normalCalBtn = document.getElementById('normalCBtn');
 let bmiCalBtn = document.getElementById('bmiCBtn');
 let sampleInterestCalBtn = document.getElementById('interestCBtn');
+let cgpaCalBtn = document.getElementById('cgpaCBtn');
 
 let normalCalculator = document.querySelector('.normalCalculator');
 let bmiCalculator = document.querySelector('.bmiCalculator');
 let sampleInterestCalculator = document.querySelector('.sampleInterest');
+let cgpaCalculator= document.querySelector('.cgpaCalculator');
+
+cgpaCalBtn.addEventListener('click', () => {
+    cgpaCalculator.classList.add('show-hide-cgpamic');
+    sampleInterestCalculator.classList.remove('show-hide-sic');
+    normalCalculator.classList.add('hide-show-nc');
+    bmiCalculator.classList.remove('show-hide-bmic');
+});
 
 sampleInterestCalBtn.addEventListener('click', () => {
     sampleInterestCalculator.classList.add('show-hide-sic');
     normalCalculator.classList.add('hide-show-nc');
     bmiCalculator.classList.remove('show-hide-bmic');
+    cgpaCalculator.classList.remove('show-hide-cgpamic');
 });
 bmiCalBtn.addEventListener('click', () => {
     normalCalculator.classList.add('hide-show-nc');
     bmiCalculator.classList.add('show-hide-bmic');
     sampleInterestCalculator.classList.remove('show-hide-sic');
+    cgpaCalculator.classList.remove('show-hide-cgpamic');
 });
 
 normalCalBtn.addEventListener('click', () => {
     normalCalculator.classList.remove('hide-show-nc');
     bmiCalculator.classList.remove('show-hide-bmic');
     sampleInterestCalculator.classList.remove('show-hide-sic');
+    cgpaCalculator.classList.remove('show-hide-cgpamic');
 });
+
 
 //***********************[[[[[[[[[[[[[[[[[[[[ toggling all calculator Section end ]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
@@ -201,17 +214,17 @@ function countBmi(){
       result = ' Underweight';
       commentColor = "#ff0000";    
     }
-    else if(18.5<=bmi&&bmi<=24.9)
+    else if(bmi<=25)
     {
       result = ' Healthy';
       commentColor = "#00ff3c";
     }
-    else if(25<=bmi&&bmi<=29.9)
+    else if(bmi<=29.9)
     {
       result = ' Overweight';
       commentColor = "#ff0000";  
     }
-    else if(30<=bmi&&bmi<=34.9)
+    else if(bmi<=34.9)
     {
       result = ' Obese';
       commentColor = "#ff0000";  
@@ -247,6 +260,17 @@ let resultInterestContainer = document.querySelector('.resultInterestContainer')
 let smIResult = document.querySelector('#smIResult');
 let totalAmountResult = document.querySelector('#totalAmountResult');
 
+principleAmountP.addEventListener("keyup", (e) => {
+    console.log(e.key);
+    if((e.key == 'e') || (e.key == '-'))
+    {
+        principleAmountP.value = '';
+        alert("Enter valid details");
+    }
+
+    console.log(principleAmountP.value);
+});
+
 sInterestBtn.addEventListener('click', () => {
     var P = principleAmountP.value;
     var R = interestR.value;
@@ -255,7 +279,7 @@ sInterestBtn.addEventListener('click', () => {
     if((P === '') && (R === '') && (T === ''))
     {
         alert("Please enter the details first");
-    } 
+    }
     else
     {    
         resultInterestContainer.style.display = "block";
@@ -273,6 +297,72 @@ sInterestBtn.addEventListener('click', () => {
 
 
 //***********************[[[[[[[[[[[[[[[[[[[[ CGPA Calculator Section [ Start ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
+let numberOfSubject = document.querySelector("#numberOfSubject");
+let cgpaFirstContainer = document.querySelector(".cgpaFirstContainer");
+let cgpaSecondContainerOdderList = document.querySelector(".cgpaSecondContainerOdderList");
+let resultsgpaContainer = document.querySelector(".resultsgpa-container");
+let cgpaCalculateBtn = document.querySelector("#cgpaCalculateBtn");
+let finalcgpa = document.querySelector(".finalcgpa");
+let cgpaResult = document.querySelector("#cgpa");
+
+let cgpaSubmitBtn = document.querySelector("#cgpaSubmitBtn");
+
+//suffix ex- 1st,2nd,3rd etc
+function suffixCheck(i)
+{
+    if (i == 11 || i == 12 || i == 13) {
+        return 'th';
+    } else if (i % 10 == 1) {
+        return 'st';
+    } else if (i % 10 == 2) {
+        return 'nd';
+    } else if (i % 10 == 3) {
+        return 'rd';
+    } else {
+        return 'th';
+    }
+}
+
+cgpaSubmitBtn.addEventListener("click", () => {
+
+    let numberOfSubjectValue = numberOfSubject.value;
+    let count = numberOfSubjectValue;
+    if(numberOfSubjectValue != '')
+    {
+        resultsgpaContainer.style.display = "block";
+        cgpaSecondContainerOdderList.style.display = "block";
+        cgpaFirstContainer.style.display = "none";
+        for(let i = 0; i < numberOfSubjectValue; i++)
+        {
+        let list = `<li>
+        <input type="number" class="sgpaValue" placeholder="Enter ${count}${suffixCheck(count--)} semester SGPA">
+        </li>`
+        cgpaSecondContainerOdderList.insertAdjacentHTML("afterbegin",list);
+        }
+    }
+    else
+    {
+        alert("Please enter the number of subjects");
+    }
+
+});
+
+finalcgpa.style.display = "none";
+
+cgpaCalculateBtn.addEventListener("click", () => {
+    let sum = 0;
+    let sgpavalue = document.querySelectorAll('.sgpaValue');
+     
+    sgpavalue.forEach((elem,index) => {
+        sum += Number(sgpavalue[index].value);
+    });
+    let cgpa = sum/sgpavalue.length;
+
+    finalcgpa.style.display = "block";
+
+    cgpaResult.innerHTML = cgpa.toFixed(2);
+    
+});
 
 //***********************[[[[[[[[[[[[[[[[[[[[ CGPA Calculator Section [  End ] **]]]]]]]]]]]]]]]]]]]]]]]]]]*****************************
 
