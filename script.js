@@ -350,10 +350,15 @@ cgpaSubmitBtn.addEventListener("click", () => {
 finalcgpa.style.display = "none";
 
 cgpaCalculateBtn.addEventListener("click", () => {
+    
     let sum = 0;
     let sgpavalue = document.querySelectorAll('.sgpaValue');
-     
+
     sgpavalue.forEach((elem,index) => {
+        if(sgpavalue[index].value == '')
+        {
+           alert(`Please enter the SGPA for the ${index+1}${suffixCheck(index+1)} Semester`);
+        }
         sum += Number(sgpavalue[index].value);
     });
     let cgpa = sum/sgpavalue.length;
