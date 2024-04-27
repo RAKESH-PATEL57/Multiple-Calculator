@@ -358,7 +358,6 @@ input[type=number]::-webkit-inner-spin-button {
     border-radius: 15px;
   }
   button {
-    width: 40px;
     height: 50px;
     margin: 1.2rem;
     font-size: 1.5rem;
