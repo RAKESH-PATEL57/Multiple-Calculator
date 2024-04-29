@@ -1,6 +1,7 @@
-@mixin flex-box($display, $justifly-content, $alignItems )
+@mixin flex-box($display, $justifly-content, $alignItems,$flex-direction)
 {
     display: $display;
     justify-content: $justifly-content;
     align-items: $alignItems;
+    flex-direction: $flex-direction;
 }
