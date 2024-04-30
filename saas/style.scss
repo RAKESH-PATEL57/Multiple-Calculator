@@ -339,10 +339,11 @@ input[type="number"]::-webkit-inner-spin-button
 
 .cgpaCalculator .cgpaFirstContainer
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    @include flex-box(flex,center,center,column);
     width: 30rem;
 }
 
@@ -357,8 +358,8 @@ input[type="number"]::-webkit-inner-spin-button
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    flex-direction: column;
-    @include flex-box;
+    // flex-direction: column;
+    @include flex-box(flex,center,center,column);
     width: 30rem;
 }
 
