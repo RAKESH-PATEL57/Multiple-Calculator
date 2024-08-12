@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: unset;
   background: linear-gradient(45deg, #0a0a0a, #3a4452);
   overflow: hidden;
 }
@@ -20,6 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: unset;
   height: 100vh;
   width: 90vw;
   position: relative;
@@ -29,6 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: unset;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -156,8 +159,8 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
   flex-direction: column;
+  gap: 3rem;
   opacity: 1;
   scale: 1;
   transition: 0.5s linear;
@@ -170,8 +173,8 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
   flex-direction: column;
+  gap: 2.5rem;
 }
 
 .content .inputsBMI {
@@ -180,6 +183,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: unset;
   font-size: 1rem;
   width: 100%;
 }
@@ -223,6 +227,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: unset;
 }
 
 .sampleInterest {
@@ -235,8 +240,8 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
   flex-direction: column;
+  gap: 3rem;
   opacity: 1;
   scale: 1;
   transition: 0.5s linear;
@@ -253,6 +258,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: unset;
   font-size: 1rem;
   width: 80%;
 }
@@ -298,9 +304,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 .cgpaCalculator .cgpaFirstContainer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 30rem;
 }
 
@@ -311,9 +317,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 .cgpaCalculator .cgpaSecondContainer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 30rem;
 }
 
@@ -352,6 +358,11 @@ input[type=number]::-webkit-inner-spin-button {
   padding-top: 1rem;
 }
 
+@media (max-width: 1500px) {
+  html {
+    font-size: 80%;
+  }
+}
 @media (max-width: 1080px) {
   .calculator {
     padding: 10px;
