@@ -3,7 +3,6 @@
 @import "./custom_css/var";
 @import "./custom_css/placingItems";
 
-
 *{
     margin: 0;
     padding: 0;
@@ -178,9 +177,8 @@ button:hover
 
 .bmiCalculator.show-hide-bmic
 {
-    @include flex-box(flex,center,center);
+    @include flex-box(flex,center,center,column);
     gap: 3rem;
-    flex-direction: column;
     opacity: 1;
     scale: 1;
     transition: .5s linear;
@@ -191,16 +189,15 @@ button:hover
 
 #bmiCalculator .content
 {
-    @include flex-box(flex,center,center);
+    @include flex-box(flex,center,center,column);
     gap: 2.5rem;
-    flex-direction: column;
 }
 
 .content .inputsBMI
 {
     height: 3rem;
     color: $font-color;
-    @include flex-box(flex,space-between,center);
+    @include flex-box(flex,space-between,center,unset);
     font-size: 1rem;
     width: 100%;
 }
@@ -247,7 +244,7 @@ input[type="number"]::-webkit-inner-spin-button
 #bmiCalculator .bmiComment
 {
     height: 2rem;
-    @include flex-box(flex,center,center);
+    @include flex-box(flex,center,center,unset);
 }
 
 
@@ -264,9 +261,8 @@ input[type="number"]::-webkit-inner-spin-button
 
 .sampleInterest.show-hide-sic
 {
-    @include flex-box(flex,center,center);
+    @include flex-box(flex,center,center,column);
     gap: 3rem;
-    flex-direction: column;
     opacity: 1;
     scale: 1;
     transition: .5s linear;
@@ -281,7 +277,7 @@ input[type="number"]::-webkit-inner-spin-button
 {
     height: 2rem;
     color: $font-color;
-    @include flex-box(flex,space-between,center);
+    @include flex-box(flex,space-between,center,unset);
     font-size: 1rem;
     width: 80%;
 }
@@ -401,6 +397,14 @@ input[type="number"]::-webkit-inner-spin-button
 //**************[[[[[[[[[[[[[[[[[[[[[ CGPA Calculator section [*   End  * ]]]]]]]]]]]]]]]]]]]]]]]]]]]]*************************
 
 //**************[[[[[[[[[[[[[[[[[[[[[ Making responssive ]]]]]]]]]]]]]]]]]]]]]]]*************************
+
+@media (max-width: 1500px)
+{
+   html
+   {
+    font-size: 80%;
+   }
+}
 
 @media (max-width: 1080px)
 {
