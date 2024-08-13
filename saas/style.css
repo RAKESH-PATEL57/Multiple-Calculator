@@ -374,6 +374,18 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 800px) {
+  .btns {
+    position: initial;
+  }
+  .normalCalculator, .bmiCalculator, .sampleInterest, .cgpaCalculator {
+    position: initial;
+  }
+  .allContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (max-width: 450px) {
   .calculator {
     padding: 10px;
